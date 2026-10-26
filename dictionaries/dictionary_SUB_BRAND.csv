@@ -1,0 +1,9 @@
+SUB_BRAND_value,ngram_token,alias_token
+CLASSIC,"[""CLASSIC""]",[]
+QUANTUM,"[""QUANTUM""]","[""QNTM""]"
+VICTORY,"[""VICTORY""]",[]
+WILD,"[""WILD""]",[]
+LOCO,"[""LOCO""]",[]
+THIRST MUTILATOR,"[""MUTILATOR"", ""THIRST"", ""THIRSTMUTILATOR""]","[""MUT"", ""MUTILATOR"", ""THIRST"", ""THIRSTMUT""]"
+EXTREME,"[""EXTREME""]","[""XTREME""]"
+ZERO,"[""ZERO""]","[""SUGAR"", ""ZERO"", ""ZEROSUGAR""]"

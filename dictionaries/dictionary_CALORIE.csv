@@ -1,0 +1,4 @@
+CALORIE_value,ngram_token,alias_token
+ZERO,"[""ZERO""]","[""DIET"", ""FREE"", ""SUGAR"", ""SUGARFREE"", ""ZERO"", ""ZEROSUGAR""]"
+LOW,"[""LOW""]","[""LIGHT""]"
+FULL,"[""FULL""]","[""REGULAR""]"
