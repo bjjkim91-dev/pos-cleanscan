@@ -1,0 +1,7 @@
+PACK_CONTENT_value,ngram_token,alias_token
+CAN,"[""CAN""]","[""CANS"", ""CNS"", ""SLEEK"", ""TIN""]"
+BOTTLE - PET,"[""BOTTLE"", ""BOTTLEPET"", ""PET""]","[""BOTTLE"", ""BTL"", ""BTTL"", ""PET""]"
+BOTTLE - GLASS,"[""BOTTLE"", ""BOTTLEGLASS"", ""GLASS""]","[""GLASS"", ""NRG"", ""NRGGLASS""]"
+GABLE - TOP,"[""GABLE"", ""GABLETOP"", ""TOP""]","[""CARTON"", ""GABLE""]"
+TETRA,"[""TETRA""]","[""PAK"", ""TETRA"", ""TETRAPAK""]"
+POUCH,"[""POUCH""]","[""MIX""]"

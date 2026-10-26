@@ -1,0 +1,14 @@
+FLAVOUR_value,ngram_token,alias_token
+ORIGINAL,"[""ORIGINAL""]","[""CLASSIC"", ""REG"", ""REGULAR""]"
+COLA,"[""COLA""]",[]
+CHERRY,"[""CHERRY""]","[""CHRY""]"
+ORANGE,"[""ORANGE""]","[""ORG"", ""ORNG""]"
+GRAPE,"[""GRAPE""]","[""GRP""]"
+LEMON LIME,"[""LEMON"", ""LEMONLIME"", ""LIME""]","[""LEM"", ""LEMLIME"", ""LEMON"", ""LEMONLIME"", ""LIME"", ""LM"", ""LMN"", ""LMNLM""]"
+BERRY,"[""BERRY""]","[""BERRY"", ""BRY"", ""MIXED"", ""MIXEDBERRY""]"
+VANILLA,"[""VANILLA""]","[""VAN""]"
+SARSAPARILLA,"[""SARSAPARILLA""]","[""SARS""]"
+TROPICAL,"[""TROPICAL""]","[""TROP""]"
+LEMON,"[""LEMON""]","[""LEM""]"
+LIME,"[""LIME""]","[""LM""]"
+TONIC WATER,"[""TONIC"", ""TONICWATER"", ""WATER""]","[""TONIC""]"

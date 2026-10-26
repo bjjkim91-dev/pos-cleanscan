@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Retailer data, ground truth and run outputs are never committed
+data/input/*
+!data/input/.gitkeep
+data/*.csv
+output/*
+!output/.gitkeep
+
+# Model weights: train your own or obtain separately
+models/**/*.safetensors
+models/**/*.bin
+models/**/tokenizer.json
+
+# AI-assistant local config and logs
+.claude/
+CLAUDE.md
+.mcp.json
+*.local.json
+
+# training artefacts; the sample JSONL stays
+training/*.jsonl
+!training/sft_sample.jsonl
+models/**/*.part
+models/**/checkpoints/

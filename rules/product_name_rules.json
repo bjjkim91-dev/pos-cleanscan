@@ -1,0 +1,135 @@
+{
+  "_comment": "Rules for deterministic construction of OUT_PRODUCT_NAME and OUT_PRODUCT_GROUP. Format: [COMPANY] [CATEGORY] [PACK_SIZE] [CONTAINER] [VARIANT?]. Showcase edition: the production file mapped a partner's full manufacturer and retailer-category lists; this one keeps the same structure with a few fictional drinks companies.",
+  "company_codes": {
+    "_comment": "Map IN_MANUFACTURER substrings to a company code. Checked case-insensitively, longest match wins.",
+    "NUKA": [
+      "NUKA-COLA CORPORATION",
+      "NUKA-COLA CORP",
+      "NUKA-COLA",
+      "NUKA COLA"
+    ],
+    "SLURM": [
+      "SLURM CORPORATION",
+      "SLURM CORP",
+      "SLURM"
+    ],
+    "BRAWNDO": [
+      "BRAWNDO CORPORATION",
+      "BRAWNDO CORP",
+      "BRAWNDO"
+    ],
+    "SUNSET": [
+      "SUNSET SARSAPARILLA"
+    ],
+    "BUZZ": [
+      "BUZZ COLA"
+    ]
+  },
+  "independent_brand_prefixes": {
+    "_comment": "The prefix used in PRODUCT_NAME/GROUP for each brand.",
+    "NUKA-COLA": "NUKA",
+    "NUKA COLA": "NUKA",
+    "SLURM": "SLURM",
+    "BRAWNDO": "BRAWNDO",
+    "SUNSET SARSAPARILLA": "SUNSET",
+    "BUZZ COLA": "BUZZ",
+    "VIM": "VIM"
+  },
+  "category_raw_to_code": {
+    "_comment": "Category code from the retailer's category text. Checked case-insensitively, first match wins, so order matters.",
+    "ENERGY": [
+      "ENERGY"
+    ],
+    "ISOTONICS": [
+      "SPORT",
+      "ISOTONIC",
+      "ELECTROLYTE"
+    ],
+    "WATER": [
+      "WATER"
+    ],
+    "NCB": [
+      "ICED TEA",
+      "ICE TEA",
+      "TEA",
+      "COFFEE"
+    ],
+    "CSD": [
+      "CARBONATED SOFT DRINKS",
+      "SOFT DRINK",
+      "CSD",
+      "SODA",
+      "POP"
+    ]
+  },
+  "container_keywords": {
+    "_comment": "Scan merged input text for these keywords to determine the container. First match wins; order matters.",
+    "GLASS": [
+      "GLASS",
+      "NRG GLASS",
+      "BTTL GLASS"
+    ],
+    "GABLE": [
+      "GABLE",
+      "CARTON"
+    ],
+    "TETRA": [
+      "TETRA"
+    ],
+    "SLEEK": [
+      "SLEEK",
+      "SLIM CAN"
+    ],
+    "CAN": [
+      "CAN",
+      "CUBE",
+      "CNS",
+      "TIN",
+      " CAN ",
+      "CANS"
+    ],
+    "BTTL": [
+      "BTTL",
+      "BOTTLE",
+      "BTL",
+      "PET"
+    ]
+  },
+  "brand_container_overrides": {
+    "_comment": "Force a container for these brands regardless of the keyword scan.",
+    "SUNSET SARSAPARILLA": "GLASS"
+  },
+  "container_size_inference": {
+    "_comment": "When no keyword is found, infer from size and count. Tall cans are listed separately so 500/591 ml correctly map to BTTL.",
+    "can_max_size_single_ml": 473,
+    "can_multipack_max_size_ml": 473,
+    "bottle_min_size_ml": 500,
+    "tall_can_sizes_ml": [
+      695
+    ]
+  },
+  "size_format": {
+    "_comment": "Rules for formatting the size component of PRODUCT_NAME/GROUP.",
+    "large_threshold_ml": 1000,
+    "multipack_format": "{count} X {size} ML",
+    "single_small_format": "{size} ML",
+    "single_large_format": "{size_L} L",
+    "l_format_note": "Use Python f'{ml/1000:g} L' to trim trailing zeros: 2000 -> 2 L, 1750 -> 1.75 L"
+  },
+  "variant_suffix": {
+    "_comment": "PRODUCT_NAME only, not GROUP. Added after the container for CSD multipacks up to 12 and large-format bottles of 2 L and up. 24-pack cubes and larger use no suffix.",
+    "core_brands": [
+      "NUKA-COLA",
+      "NUKA COLA",
+      "BUZZ COLA"
+    ],
+    "apply_to_categories": [
+      "CSD"
+    ],
+    "apply_when_count_gt": 1,
+    "apply_when_count_lte": 12,
+    "apply_when_size_ml_gte": 2000,
+    "default_suffix": "FLAV",
+    "core_suffix": "CORE"
+  }
+}

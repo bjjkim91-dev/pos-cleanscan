@@ -1,0 +1,7 @@
+BRAND_value,ngram_token,alias_token
+NUKA-COLA,"[""COLA"", ""NUKA"", ""NUKACOLA""]","[""COLA"", ""NC"", ""NUKA"", ""NUKACOLA""]"
+SLURM,"[""SLURM""]","[""SLRM""]"
+BRAWNDO,"[""BRAWNDO""]","[""BRAWNDO"", ""BRAWNDOCORP"", ""BRWNDO"", ""CORP""]"
+SUNSET SARSAPARILLA,"[""SARSAPARILLA"", ""SUNSET"", ""SUNSETSARSAPARILLA""]","[""SARS"", ""SUNSET"", ""SUNSETSARS""]"
+BUZZ COLA,"[""BUZZ"", ""BUZZCOLA"", ""COLA""]","[""BUZZ""]"
+VIM,"[""VIM""]",[]
